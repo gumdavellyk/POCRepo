@@ -1,0 +1,7 @@
+Name: Omniscripts-poc
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - OmniScript/CPQ_CreateQuote_English
+VlocityTypesToFetch:
+    - OmniScript
+SalesforceTypesToFetch:

@@ -1,0 +1,12 @@
+Name: Salesforce-poc
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - classes/ChangePasswordController.cls
+    - pages/ChangePassword.page
+    - triggers/UpgradeStep.trigger
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - ApexClass
+    - ApexPage
+    - ApexTrigger
