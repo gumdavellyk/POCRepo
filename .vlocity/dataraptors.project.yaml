@@ -1,0 +1,7 @@
+Name: DataRaptors
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - DataRaptor/AccountSearch
+VlocityTypesToFetch:
+    - DataRaptor
+SalesforceTypesToFetch:

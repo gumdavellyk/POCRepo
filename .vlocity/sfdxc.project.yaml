@@ -1,0 +1,12 @@
+Name: sfdxc
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - aura/callInitiatedPanel
+    - aura/Cards
+    - lwc/demo_eng_image_wrapper
+    - lwc/demo_eng_account_data_wireframe
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - AuraDefinitionBundle
+    - LightningComponentBundle
