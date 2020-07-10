@@ -1,0 +1,8 @@
+Name: sfdx2
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - triggers/testPOC.trigger
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - ApexTrigger
