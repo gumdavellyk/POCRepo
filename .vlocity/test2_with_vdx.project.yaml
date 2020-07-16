@@ -1,0 +1,9 @@
+Name: test2 with vdx
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - DataRaptor/AccountSearch
+    - lwc/demo_eng_image_wrapper
+VlocityTypesToFetch:
+    - DataRaptor
+SalesforceTypesToFetch:
+    - LightningComponentBundle
