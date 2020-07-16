@@ -1,0 +1,10 @@
+Name: test commit from vdx
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - classes/a1.cls
+    - pages/AccountConsoleCards.page
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - ApexClass
+    - ApexPage
