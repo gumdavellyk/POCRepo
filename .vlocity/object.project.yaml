@@ -1,7 +1,8 @@
-Name: Omniscripts-poc
+Name: Object
 ignoreDependencies: false
 VlocityDataPackKeys:
-    - OmniScript/Handset_Buy_English
+    - objects/Event/Event.object
 VlocityTypesToFetch:
-    - OmniScript
+
 SalesforceTypesToFetch:
+    - CustomObject

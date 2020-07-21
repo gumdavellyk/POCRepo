@@ -1,7 +1,12 @@
-Name: Omniscripts-poc
+Name: feature1
 ignoreDependencies: false
 VlocityDataPackKeys:
     - OmniScript/Handset_Buy_English
+    - pages/AnswersHome.page
+    - DataRaptor/CreateContactInteractionTopic
 VlocityTypesToFetch:
+    - DataRaptor
     - OmniScript
 SalesforceTypesToFetch:
+    - ApexComponent
+    - ApexPage
