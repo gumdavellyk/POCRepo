@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/demo_eng_account_data_wireframe": [
+                "demo_eng_account_data_wireframe/demo_eng_account_data_wireframe.js"
+            ],
+            "c/demo_eng_image_wrapper": [
+                "demo_eng_image_wrapper/demo_eng_image_wrapper.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

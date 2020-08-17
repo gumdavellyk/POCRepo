@@ -1,0 +1,44 @@
+image: atlassian/default-image:2
+pipelines:
+  branches:
+   - step:
+       name: SF Deploy
+       script:
+         - echo ${dev_CI_sfdx_url} > environment.sfdx
+         - sfdx force:auth:sfdxurl:store -d -a {dev_CI_sfdx_url} -f environment.sfdx
+         - sfdx force:source:deploy --sourcepath salesforce_sfdx --targetusername {dev_CI_sfdx_url} --verbose
+     - step:
+            name: SF Deploy
+            script:
+              - echo ${dev_CI_sfdx_url} > environment.sfdx
+              - sfdx force:auth:sfdxurl:store -d -a {dev_CI_sfdx_url} -f environment.sfdx
+              - vlocity -sfdx.username {dev_CI_sfdx_url} -job jobs/job.yaml packDeploy --verbose true --simpleLogging true
+
+custom:
+  ProdDeploy:
+    - step:
+           name: SF Deploy
+           script:
+             - echo ${prod_CI_sfdx_url} > environment.sfdx
+             - sfdx force:auth:sfdxurl:store -d -a {prod_CI_sfdx_url} -f environment.sfdx
+             - sfdx force:source:deploy --sourcepath salesforce_sfdx --targetusername {prod_CI_sfdx_url} --verbose
+         - step:
+                name: SF Deploy
+                script:
+                  - echo ${prod_CI_sfdx_url} > environment.sfdx
+                  - sfdx force:auth:sfdxurl:store -d -a {prod_CI_sfdx_url} -f environment.sfdx
+                  - vlocity -sfdx.username {prod_CI_sfdx_url} -job jobs/job.yaml packDeploy --verbose true --simpleLogging true
+
+  UATDeploy:
+       - step:
+                  name: SF Deploy
+                  script:
+                    - echo ${uat_CI_sfdx_url} > environment.sfdx
+                    - sfdx force:auth:sfdxurl:store -d -a {uat_CI_sfdx_url} -f environment.sfdx
+                    - sfdx force:source:deploy --sourcepath salesforce_sfdx --targetusername {uat_CI_sfdx_url} --verbose
+                - step:
+                       name: SF Deploy
+                       script:
+                         - echo ${uat_CI_sfdx_url} > environment.sfdx
+                         - sfdx force:auth:sfdxurl:store -d -a {uat_CI_sfdx_url} -f environment.sfdx
+                         - vlocity -sfdx.username {uat_CI_sfdx_url} -job jobs/job.yaml packDeploy --verbose true --simpleLogging true

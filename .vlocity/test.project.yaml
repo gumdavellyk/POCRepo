@@ -1,0 +1,9 @@
+Name: test
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - aura/Components
+    - aura/callInitiatedPanel
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - AuraDefinitionBundle
