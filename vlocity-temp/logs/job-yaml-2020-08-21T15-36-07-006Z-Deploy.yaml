@@ -1,0 +1,200 @@
+Org: Vlocitymain
+Version: 1.12.1
+Node: v12.16.0
+PackageVersion: '890.202'
+Namespace: vlocity_ins
+Job: VDX
+Action: Deploy
+ProjectPath: ./vlocity
+TotalTime: 0m 20s
+Count:
+  Success: {}
+Errors: []
+Status:
+  Success: {}
+StatusCount:
+  Remaining: 0
+  Success: 2
+  Error: 0
+id: !<tag:yaml.org,2002:js/undefined> ''
+FullLog:
+  - ' Vlocity Build v1.12.1 '
+  - ' Verbose Logging Enabled '
+  - |2-
+     Commands >> [
+        "packDeploy"
+    ] 
+  - |2-
+     Original Options >> [
+        "-sfdx.username",
+        "Vlocitymain",
+        "-job",
+        "job.yaml",
+        "packDeploy",
+        "--verbose"
+    ] 
+  - ' DataPacksJob Data >> {} '
+  - ' Verbose mode enabled '
+  - ' Org >> Vlocitymain '
+  - ' Vlocity Build v1.12.1 '
+  - ' Check Login '
+  - ' Using SFDX >> Vlocitymain '
+  - ' SFDX Authenticated - Vlocitymain - karthikgumadi@vdo.health.1585151890684 '
+  - ' Get Namespace '
+  - ' Update Definitions '
+  - ' Get Package Version '
+  - ' Get Org Namespace '
+  - ' Running Job >> Deploy '
+  - ' Automatically Updating Settings '
+  - |2-
+     Found import paths >> [
+        "latest",
+        "separateMatrixVersions",
+        "separateProducts",
+        "v1",
+        "v2"
+    ] 
+  - ' Found datapack candidates >> latest 61 '
+  - ' Found datapack candidates >> separateMatrixVersions 3 '
+  - ' Found datapack candidates >> separateProducts 7 '
+  - ' Found datapack candidates >> v1 2 '
+  - ' Found datapack candidates >> v2 3 '
+  - ' Adding to File >> latest/Attachment Migration - Attachment-Migration   '
+  - ' Adding to File >> latest/Attribute Assignment Rule Migration - Attribute-Assignment-Rule-Migration   '
+  - ' Adding to File >> latest/Attribute Category Migration - Attribute-Category-Migration   '
+  - ' Adding to File >> latest/CPQ Configuration Setup Migration - CPQ-Configuration-Setup-Migration   '
+  - ' Adding to File >> latest/Calculation Matrix Migration - Calculation-Matrix-Migration   '
+  - ' Adding to File >> latest/Calculation Procedure Migration - Calculation-Procedure-Migration   '
+  - ' Adding to File >> latest/Catalog Migration - Catalog-Migration   '
+  - ' Adding to File >> latest/Content Version Migration - Content-Version-Migration   '
+  - ' Adding to File >> latest/Context Action Migration - Context-Action-Migration   '
+  - ' Adding to File >> latest/Context Dimension Migration - Context-Dimension-Migration   '
+  - ' Adding to File >> latest/Context Scope Migration - Context-Scope-Migration   '
+  - ' Adding to File >> latest/Contract Type Migration - Contract-Type-Migration   '
+  - ' Adding to File >> latest/DataRaptor Migration - DataRaptor-Migration   '
+  - ' Adding to File >> latest/Document Clause Migration - Document-Clause-Migration   '
+  - ' Adding to File >> latest/Document Migration - Document-Migration   '
+  - ' Adding to File >> latest/Document Template Migration - Document-Template-Migration   '
+  - ' Adding to File >> latest/Entity Filter Migration - Entity-Filter-Migration   '
+  - ' Adding to File >> latest/Incremental Product Attributes Migration - Incremental-Product-Attributes-Migration   '
+  - ' Adding to File >> latest/Incremental Product Pricing Migration - Incremental-Product-Pricing-Migration   '
+  - ' Adding to File >> latest/Interface Implementation Migration - Interface-Implementation-Migration   '
+  - ' Adding to File >> latest/Item Implementation Migration - Item-Implementation-Migration   '
+  - ' Adding to File >> latest/Manual Queue Migration - Manual-Queue-Migration   '
+  - ' Adding to File >> latest/Object Class Migration - Object-Class-Migration   '
+  - ' Adding to File >> latest/Object Context Rule Migration - Object-Context-Rule-Migration   '
+  - ' Adding to File >> latest/Object Layout Migration - Object-Layout-Migration   '
+  - ' Adding to File >> latest/Offer Migration Plan Object Migration - Offer-Migration-Plan-Object-Migration   '
+  - ' Adding to File >> latest/OmniScript Migration - OmniScript-Migration   '
+  - ' Adding to File >> latest/Orchestration Dependency Definition Migration - Orchestration-Dependency-Definition-Migration   '
+  - ' Adding to File >> latest/Orchestration Item Definition Migration - Orchestration-Item-Definition-Migration   '
+  - ' Adding to File >> latest/Orchestration Plan Definition Migration - Orchestration-Plan-Definition-Migration   '
+  - ' Adding to File >> latest/PriceList Migration - PriceList-Migration   '
+  - ' Adding to File >> latest/Pricebook2 Migration - Pricebook2-Migration   '
+  - ' Adding to File >> latest/Pricing Plan Migration - Pricing-Plan-Migration   '
+  - ' Adding to File >> latest/PricingVariable Migration - PricingVariable-Migration   '
+  - ' Adding to File >> latest/Product2 Migration - Product2-Migration   '
+  - ' Adding to File >> latest/Project Migration - Project-Migration   '
+  - ' Adding to File >> latest/Promotion Migration - Promotion-Migration   '
+  - ' Adding to File >> latest/Query Builder Migration - Query-Builder-Migration   '
+  - ' Adding to File >> latest/Rule Migration - Rule-Migration   '
+  - ' Adding to File >> latest/SObject Migration - SObject-Migration   '
+  - ' Adding to File >> latest/Story Object Configuration Migration - Story-Object-Configuration-Migration   '
+  - ' Adding to File >> latest/String Migration - String-Migration   '
+  - ' Adding to File >> latest/System Migration - System-Migration   '
+  - ' Adding to File >> latest/TimePlan Migration - TimePlan-Migration   '
+  - ' Adding to File >> latest/TimePolicy Migration - TimePolicy-Migration   '
+  - ' Adding to File >> latest/UIFacet Migration - UIFacet-Migration   '
+  - ' Adding to File >> latest/UISection Migration - UISection-Migration   '
+  - ' Adding to File >> latest/Vlocity Action Migration - Vlocity-Action-Migration   '
+  - ' Adding to File >> latest/Vlocity Attachment Migration - Vlocity-Attachment-Migration   '
+  - ' Adding to File >> latest/Vlocity Card Migration - Vlocity-Card-Migration   '
+  - ' Adding to File >> latest/Vlocity Function Migration - Vlocity-Function-Migration   '
+  - ' Adding to File >> latest/Vlocity Offering Procedure Migration - Vlocity-Offering-Procedure-Migration   '
+  - ' Adding to File >> latest/Vlocity Picklist Migration - Vlocity-Picklist-Migration   '
+  - ' Adding to File >> latest/Vlocity Scheduled Job - Vlocity-Scheduled-Job   '
+  - ' Adding to File >> latest/Vlocity Search Widget Setup Migration - Vlocity-Search-Widget-Setup-Migration   '
+  - ' Adding to File >> latest/Vlocity State Model Migration - Vlocity-State-Model-Migration   '
+  - ' Adding to File >> latest/Vlocity Template Migration - Vlocity-Template-Migration   '
+  - ' Adding to File >> latest/Vlocity UI Layout Migration - Vlocity-UI-Layout-Migration   '
+  - ' Adding to File >> latest/Vq Machine Migration - Vq-Machine-Migration   '
+  - ' Adding to File >> latest/Vq Resource Migration - Vq-Resource-Migration   '
+  - ' Adding to File >> separateMatrixVersions/Calculation Matrix Migration - Calculation-Matrix-Migration   '
+  - ' Adding to File >> separateMatrixVersions/Calculation Matrix Version Migration - Calculation-Matrix-Version-Migration   '
+  - ' Adding to File >> separateProducts/Product Attributes Migration - Product-Attributes-Migration   '
+  - ' Adding to File >> separateProducts/Product Configuration Migration - Product-Configuration-Migration   '
+  - ' Adding to File >> separateProducts/Product Decomposition Migration - Product-Decomposition-Migration   '
+  - ' Adding to File >> separateProducts/Product Hierarchy Migration - Product-Hierarchy-Migration   '
+  - ' Adding to File >> separateProducts/Product Pricing Migration - Product-Pricing-Migration   '
+  - ' Adding to File >> separateProducts/Product2 Migration - Product2-Migration   '
+  - ' Adding to File >> v1/Vlocity Card Migration - Vlocity-Card-Migration   '
+  - ' Adding to File >> v2/Calculation Matrix Migration - Calculation-Matrix-Migration   '
+  - ' Adding to File >> v2/Product2 Migration - Product2-Migration   '
+  - ' BuildFile >> 71 Items '
+  - ' Get Existing Setting >> Select vlocity_ins__MapId__c from vlocity_ins__DRMapItem__c where vlocity_ins__MapId__c = ''59310526latest'' '
+  - ' Settings Already Current. Use --force if you want to update again '
+  - ' Getting DataPacks >> ./vlocity undefined '
+  - |2-
+     Found import paths >> [
+        "DataRaptor",
+        "OmniScript"
+    ] 
+  - ' Found datapack candidates >> DataRaptor 1 '
+  - ' Found datapack candidates >> OmniScript 1 '
+  - ' Adding to File >> DataRaptor/AccountSearch - AccountSearch   '
+  - ' Adding to File >> OmniScript/CPQ_CreateQuote_English - CPQ_CreateQuote_English   '
+  - ' Deploy >> 2 Items '
+  - ' Automatically Updating Picklists Before Deploy '
+  - ' Getting DataPacks >> ./vlocity undefined '
+  - |2-
+     Found import paths >> [
+        "DataRaptor",
+        "OmniScript"
+    ] 
+  - ' Found datapack candidates >> DataRaptor 1 '
+  - ' Found datapack candidates >> OmniScript 1 '
+  - ' Adding to File >> DataRaptor/AccountSearch - AccountSearch   '
+  - ' Adding to File >> OmniScript/CPQ_CreateQuote_English - CPQ_CreateQuote_English   '
+  - ' Deploy >> 2 Items '
+  - ' Running Query >> SELECT Id,Label,NamespacePrefix,vlocity_ins__ObjectAPIName__c,vlocity_ins__MatchingKeyFields__c FROM vlocity_ins__DRMatchingKey__mdt '
+  - ' Query Records Found >> SELECT Id,Label,NamespacePrefix,vlocity_ins__ObjectAPIName__c,vlocity_ins__MatchingKeyFields__c FROM vlocity_ins__DRMatchingKey__mdt 97 '
+  - |2-
+     Found import paths >> [
+        "DataRaptor",
+        "OmniScript"
+    ] 
+  - ' Found datapack candidates >> DataRaptor 1 '
+  - ' Found datapack candidates >> OmniScript 1 '
+  - ' Adding to Deploy >> DataRaptor/AccountSearch - AccountSearch   '
+  - ' Adding to Deploy >> OmniScript/CPQ_CreateQuote_English - CPQ_CreateQuote_English   '
+  - ' Deploy >> 2 Items '
+  - ' Deploying >> DataRaptor/AccountSearch,OmniScript/CPQ_CreateQuote_English '
+  - ' Result >> {"Finished":0,"Total":2,"Message":"Ready","Status":"Ready","VlocityDataPackId":"a5A3h000000LupYEAS","VlocityDataPackProcess":"Import"} '
+  - ' Result >> {"Finished":0,"Total":2,"Message":"InProgress","Status":"InProgress","VlocityDataPackId":"a5A3h000000LupYEAS","VlocityDataPackProcess":"Import"} '
+  - ' Result >> {"Finished":2,"Total":2,"Message":"Complete","Status":"Complete","VlocityDataPackId":"a5A3h000000LupYEAS","VlocityDataPackProcess":"Import"} '
+  - ' Deploy Success >> DataRaptor/AccountSearch AccountSearch  '
+  - ' Deploy Success >> OmniScript/CPQ_CreateQuote_English CPQ Create Quote  '
+  - ' Result >> {"VlocityDataPackId":"a5A3h000000LupYEAS","VlocityDataPackKeysToActivate":["ALL"],"Total":0,"Finished":0,"VlocityDataPacksActivated":[],"Status":"Complete","error":"OK","errorCode":"INVOKE-200","activationSuccess":[{"VlocityDataPackKey":"OmniScript/CPQ_CreateQuote_English"}]} '
+  - ' Activated >> OmniScript/CPQ_CreateQuote_English '
+  - ' Result >> {"Status":"Deleted","VlocityDataPackId":"a5A3h000000LupYEAS"} '
+  - ' Salesforce Org >> Vlocitymain '
+  - ' Version Info >> v1.12.1 vlocity_ins 890.202 '
+  - ' Log File >> vlocity-temp/logs/job-yaml-2020-08-21T15-36-07-006Z-Deploy.yaml '
+  - ' Current Status >> Deploy '
+  - ' Remaining >> 0 '
+  - ' Success >> 2 '
+  - ' Error >> 0 '
+  - ' Elapsed Time >> 0m 20s '
+  - ' Saving File Start '
+  - ' Saving File End >> 4 '
+  - ' Checking Valid Imports Start '
+  - ' Saving File Start '
+  - ' Saving File End >> 2 '
+  - ' Salesforce Org >> Vlocitymain '
+  - ' Version Info >> v1.12.1 vlocity_ins 890.202 '
+  - ' Log File >> vlocity-temp/logs/job-yaml-2020-08-21T15-36-07-006Z-Deploy.yaml '
+  - ' Current Status >> Deploy '
+  - ' Remaining >> 0 '
+  - ' Success >> 2 '
+  - ' Error >> 0 '
+  - ' Elapsed Time >> 0m 20s '

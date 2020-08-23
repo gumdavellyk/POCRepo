@@ -1,0 +1,8 @@
+Org: Vlocitymain
+Version: 1.12.1
+PackageVersion: 890.202
+Namespace: vlocity_ins
+Job: job.yaml
+Action: Deploy
+ProjectPath: ./vlocity
+Errors: None

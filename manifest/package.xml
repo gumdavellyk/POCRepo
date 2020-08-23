@@ -7036,5 +7036,9 @@
 		<members>vlocity_cmt__XOMSetup__c.vlocity_cmt__Value__c</members>
 		<name>CustomField</name>
 	</types>
+	<types>
+		<members>Account.AllAccounts</members>
+		<name>ListView</name>
+	</types>
 	<version>48.0</version>
 </Package>

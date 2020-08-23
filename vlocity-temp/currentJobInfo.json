@@ -1,0 +1,679 @@
+{
+    "projectPath": "./vlocity",
+    "autoRetryErrors": true,
+    "autoUpdate": true,
+    "queries": [
+        {
+            "VlocityDataPackType": "AttributeAssignmentRule",
+            "query": "Select Id, Name from %vlocity_namespace%__AttributeAssignmentRule__c"
+        },
+        {
+            "VlocityDataPackType": "AttributeCategory",
+            "query": "Select Id, Name, %vlocity_namespace%__Code__c from %vlocity_namespace%__AttributeCategory__c"
+        },
+        {
+            "VlocityDataPackType": "CalculationMatrix",
+            "query": "Select Id, Name from %vlocity_namespace%__CalculationMatrix__c"
+        },
+        {
+            "VlocityDataPackType": "CalculationMatrixVersion",
+            "query": "Select Id, Name from %vlocity_namespace%__CalculationMatrixVersion__c WHERE %vlocity_namespace%__IsEnabled__c = true",
+            "requiredSetting": "separateMatrixVersions"
+        },
+        {
+            "VlocityDataPackType": "CalculationProcedure",
+            "query": "Select Id, Name from %vlocity_namespace%__CalculationProcedure__c"
+        },
+        {
+            "VlocityDataPackType": "Catalog",
+            "query": "Select Id, Name from %vlocity_namespace%__Catalog__c"
+        },
+        {
+            "VlocityDataPackType": "ContentVersion",
+            "query": "Select Id, Title, %vlocity_namespace%__GlobalKey__c from ContentVersion WHERE %vlocity_namespace%__GlobalKey__c != null",
+            "manifestOnly": true
+        },
+        {
+            "VlocityDataPackType": "ContextAction",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__ContextAction__c"
+        },
+        {
+            "VlocityDataPackType": "ContextDimension",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__ContextDimension__c"
+        },
+        {
+            "VlocityDataPackType": "ContextScope",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__ContextScope__c"
+        },
+        {
+            "VlocityDataPackType": "ContractType",
+            "query": "Select Id, Name from %vlocity_namespace%__ContractType__c"
+        },
+        {
+            "VlocityDataPackType": "CpqConfigurationSetup",
+            "query": "Select Id, Name from %vlocity_namespace%__CpqConfigurationSetup__c"
+        },
+        {
+            "VlocityDataPackType": "CustomFieldMap",
+            "query": "Select Id, Name from %vlocity_namespace%__CustomFieldMap__c"
+        },
+        {
+            "VlocityDataPackType": "DataRaptor",
+            "query": "Select Id, Name from %vlocity_namespace%__DRBundle__c WHERE %vlocity_namespace%__Type__c != 'Migration'"
+        },
+        {
+            "VlocityDataPackType": "Document",
+            "query": "Select Id, DeveloperName from Document",
+            "manifestOnly": true
+        },
+        {
+            "VlocityDataPackType": "DocumentClause",
+            "query": "Select Id, Name from %vlocity_namespace%__DocumentClause__c"
+        },
+        {
+            "VlocityDataPackType": "DocumentTemplate",
+            "query": "Select Id, Name from %vlocity_namespace%__DocumentTemplate__c WHERE %vlocity_namespace%__Status__c = 'Active'"
+        },
+        {
+            "VlocityDataPackType": "EntityFilter",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__EntityFilter__c"
+        },
+        {
+            "VlocityDataPackType": "IntegrationProcedure",
+            "query": "Select Id, %vlocity_namespace%__Type__c, %vlocity_namespace%__SubType__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = true"
+        },
+        {
+            "VlocityDataPackType": "IntegrationProcedure",
+            "query": "Select Id, %vlocity_namespace%__Type__c, %vlocity_namespace%__SubType__c, %vlocity_namespace%__Version__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsProcedure__c = true",
+            "versionCompare": true
+        },
+        {
+            "VlocityDataPackType": "IntegrationRetryPolicy",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__IntegrationRetryPolicy__c"
+        },
+        {
+            "VlocityDataPackType": "InterfaceImplementation",
+            "query": "Select Id, Name from %vlocity_namespace%__InterfaceImplementation__c"
+        },
+        {
+            "VlocityDataPackType": "ItemImplementation",
+            "query": "Select Id, Name from %vlocity_namespace%__ItemImplementation__c"
+        },
+        {
+            "VlocityDataPackType": "ManualQueue",
+            "query": "Select Id, Name from %vlocity_namespace%__ManualQueue__c"
+        },
+        {
+            "VlocityDataPackType": "ObjectClass",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__ObjectClass__c"
+        },
+        {
+            "VlocityDataPackType": "ObjectContextRule",
+            "query": "Select Id, Name from %vlocity_namespace%__ObjectRuleAssignment__c"
+        },
+        {
+            "VlocityDataPackType": "ObjectLayout",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__ObjectLayout__c"
+        },
+        {
+            "VlocityDataPackType": "OfferMigrationPlan",
+            "query": "Select Id, Name, %vlocity_namespace%__Code__c from %vlocity_namespace%__OfferMigrationPlan__c"
+        },
+        {
+            "VlocityDataPackType": "OmniScript",
+            "query": "Select Id, %vlocity_namespace%__Type__c, %vlocity_namespace%__SubType__c, %vlocity_namespace%__Language__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsActive__c = true AND %vlocity_namespace%__IsProcedure__c = false"
+        },
+        {
+            "VlocityDataPackType": "OmniScript",
+            "query": "Select Id, %vlocity_namespace%__Type__c, %vlocity_namespace%__SubType__c, %vlocity_namespace%__Language__c, %vlocity_namespace%__Version__c from %vlocity_namespace%__OmniScript__c WHERE %vlocity_namespace%__IsProcedure__c = false",
+            "versionCompare": true
+        },
+        {
+            "VlocityDataPackType": "OrchestrationDependencyDefinition",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__OrchestrationDependencyDefinition__c"
+        },
+        {
+            "VlocityDataPackType": "OrchestrationItemDefinition",
+            "query": "Select Id, Name, %vlocity_namespace%__OrchestrationPlanDefinitionId__r.Name from %vlocity_namespace%__OrchestrationItemDefinition__c"
+        },
+        {
+            "VlocityDataPackType": "OrchestrationPlanDefinition",
+            "query": "Select Id, Name from %vlocity_namespace%__OrchestrationPlanDefinition__c"
+        },
+        {
+            "VlocityDataPackType": "OrchestrationQueueAssignmentRule",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__OrchestrationQueueAssignmentRule__c"
+        },
+        {
+            "VlocityDataPackType": "PriceList",
+            "query": "Select Id, Name, %vlocity_namespace%__Code__c from %vlocity_namespace%__PriceList__c"
+        },
+        {
+            "VlocityDataPackType": "Pricebook2",
+            "query": "Select Id, Name from Pricebook2"
+        },
+        {
+            "VlocityDataPackType": "PricingPlan",
+            "query": "Select Id, Name from %vlocity_namespace%__PricingPlan__c"
+        },
+        {
+            "VlocityDataPackType": "PricingVariable",
+            "query": "Select Id, Name, %vlocity_namespace%__Code__c from %vlocity_namespace%__PricingVariable__c"
+        },
+        {
+            "VlocityDataPackType": "Product2",
+            "query": "Select Id, Name, ProductCode, %vlocity_namespace%__GlobalKey__c from Product2"
+        },
+        {
+            "VlocityDataPackType": "Project",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__Project__c"
+        },
+        {
+            "VlocityDataPackType": "Promotion",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__Promotion__c"
+        },
+        {
+            "VlocityDataPackType": "QueryBuilder",
+            "query": "Select Id from %vlocity_namespace%__QueryBuilder__c"
+        },
+        {
+            "VlocityDataPackType": "RateBand",
+            "query": "Select Id, Name from %vlocity_namespace%__RateBand__c"
+        },
+        {
+            "VlocityDataPackType": "Rule",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__Rule__c"
+        },
+        {
+            "VlocityDataPackType": "StoryObjectConfiguration",
+            "query": "Select Id, Name from %vlocity_namespace%__StoryObjectConfiguration__c"
+        },
+        {
+            "VlocityDataPackType": "String",
+            "query": "Select Id, Name from %vlocity_namespace%__String__c",
+            "manifestOnly": true
+        },
+        {
+            "VlocityDataPackType": "System",
+            "query": "Select Id, Name from %vlocity_namespace%__System__c"
+        },
+        {
+            "VlocityDataPackType": "ThorOrchestrationQueue",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__ThorOrchestrationQueue__c"
+        },
+        {
+            "VlocityDataPackType": "TimePlan",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__TimePlan__c"
+        },
+        {
+            "VlocityDataPackType": "TimePolicy",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__TimePolicy__c"
+        },
+        {
+            "VlocityDataPackType": "UIFacet",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__UIFacet__c"
+        },
+        {
+            "VlocityDataPackType": "UISection",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__UISection__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityAction",
+            "query": "SELECT Id, Name FROM %vlocity_namespace%__VlocityAction__c WHERE %vlocity_namespace%__IsActive__c = true"
+        },
+        {
+            "VlocityDataPackType": "VlocityAttachment",
+            "query": "SELECT Id, Name, %vlocity_namespace%__GlobalKey__c FROM %vlocity_namespace%__VlocityAttachment__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityCard",
+            "query": "SELECT Id, Name FROM %vlocity_namespace%__VlocityCard__c WHERE %vlocity_namespace%__Active__c = true"
+        },
+        {
+            "VlocityDataPackType": "VlocityDataStore",
+            "query": "SELECT Id, Name FROM %vlocity_namespace%__VlocityDataStore__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityFunction",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__VlocityFunction__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityPicklist",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__Picklist__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityScheduledJob",
+            "query": "Select Id, Name, %vlocity_namespace%__GlobalKey__c from %vlocity_namespace%__VlocityScheduledJob__c"
+        },
+        {
+            "VlocityDataPackType": "VlocitySearchWidgetSetup",
+            "query": "Select Id, Name from %vlocity_namespace%__VlocitySearchWidgetSetup__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityStateModel",
+            "query": "Select Id, Name from %vlocity_namespace%__VlocityStateModel__c"
+        },
+        {
+            "VlocityDataPackType": "VlocityUILayout",
+            "query": "Select Id, Name from %vlocity_namespace%__VlocityUILayout__c WHERE %vlocity_namespace%__Active__c = true"
+        },
+        {
+            "VlocityDataPackType": "VlocityUITemplate",
+            "query": "Select Id, Name from %vlocity_namespace%__VlocityUITemplate__c WHERE %vlocity_namespace%__Active__c = true"
+        },
+        {
+            "VlocityDataPackType": "VqMachine",
+            "query": "Select Id, Name from %vlocity_namespace%__VqMachine__c"
+        },
+        {
+            "VlocityDataPackType": "VqResource",
+            "query": "Select Id, Name from %vlocity_namespace%__VqResource__c"
+        }
+    ],
+    "jobName": "job.yaml",
+    "job": "job.yaml",
+    "sfdx.username": "Vlocitymain",
+    "verbose": true,
+    "tempFolder": "./vlocity-temp/",
+    "source": "local",
+    "target": "local",
+    "sfdxUsername": "Vlocitymain",
+    "passedInOptionsOverride": {
+        "job": "job.yaml",
+        "sfdx.username": "Vlocitymain",
+        "verbose": true
+    },
+    "jobAction": "Deploy",
+    "expansionPath": ".",
+    "buildFile": "AllDataPacks.json",
+    "postStepApex": {
+        "Deploy": {
+            "Product2": {
+                "apexClass": "EPCProductJSONUpdate.cls",
+                "namespace": "vlocity_cmt"
+            }
+        }
+    },
+    "delete": true,
+    "activate": true,
+    "compileOnBuild": true,
+    "maxDepth": -1,
+    "defaultMaxParallel": 100,
+    "exportPacksMaxSize": 5,
+    "useAllRelationships": false,
+    "ignoreAllErrors": false,
+    "addSourceKeys": false,
+    "maximumDeployCount": 10,
+    "manifestOnly": false,
+    "autoUpdateSettings": true,
+    "supportHeadersOnly": true,
+    "allowHeadersPartial": true,
+    "supportForceDeploy": true,
+    "strict": false,
+    "cleanTestData": true,
+    "autoFixPicklists": true,
+    "reactivateOmniScriptsWhenEmbeddedTemplateFound": false,
+    "autoFixDeployErrors": {
+        "AttributeCategoryDisplaySequence": true
+    },
+    "tests": [
+        "Local",
+        "Org"
+    ],
+    "queryAll": true,
+    "ignoreQueryErrors": true,
+    "startTime": 1598024165163,
+    "originalAction": "Deploy",
+    "logName": "job-yaml-2020-08-21T15-36-07-006Z-Deploy.yaml",
+    "alreadyExportedKeys": [],
+    "allParents": [
+        "DataRaptor/AccountSearch",
+        "OmniScript/CPQ_CreateQuote_English"
+    ],
+    "errors": [],
+    "report": [],
+    "postDeployResults": [
+        {
+            "Id": "a1M3h000000I9sPEAS"
+        },
+        {
+            "Id": "a1O3h000001BMO1EAO"
+        },
+        {
+            "Id": "a1O3h000001BMO2EAO"
+        },
+        {
+            "Id": "a1O3h000001BMO3EAO"
+        },
+        {
+            "Id": "a1O3h000001BMO4EAO"
+        },
+        {
+            "Id": "a333h0000005f9hAAA"
+        },
+        {
+            "Id": "a1g3h000000JMbtAAG"
+        },
+        {
+            "Id": "a1g3h000000JMbuAAG"
+        },
+        {
+            "Id": "a1g3h000000JMbvAAG"
+        }
+    ],
+    "preDeployDataSummary": [
+        {
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRBundle__c",
+            "Name": "AccountSearch",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__DRBundle__c/AccountSearch",
+            "VlocityDataPackType": "DataRaptor"
+        },
+        {
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+            "Name": "CPQ Create Quote",
+            "%vlocity_namespace%__Type__c": "CPQ",
+            "%vlocity_namespace%__SubType__c": "CreateQuote",
+            "%vlocity_namespace%__Language__c": "English",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English",
+            "VlocityDataPackType": "OmniScript"
+        }
+    ],
+    "refreshVlocityBase": [],
+    "expandedDataPacks": [],
+    "currentStatus": {
+        "DataRaptor/AccountSearch": "Success",
+        "OmniScript/CPQ_CreateQuote_English": "Success"
+    },
+    "currentErrors": {},
+    "parallelStatus": {
+        "DataRaptor": false
+    },
+    "sourceKeysByParent": {},
+    "alreadyExportedIdsByType": {},
+    "alreadyErroredIdsByType": {},
+    "alreadyRetriedIdsByType": {},
+    "keyToType": {},
+    "vlocityKeysToNewNamesMap": {},
+    "vlocityRecordSourceKeyMap": {},
+    "VlocityDataPackIds": {},
+    "generatedKeysToNames": {
+        "DataRaptor/AccountSearch": "AccountSearch",
+        "OmniScript/CPQ_CreateQuote_English": "CPQ Create Quote"
+    },
+    "sourceKeyToRecordId": {
+        "%vlocity_namespace%__DRBundle__c/AccountSearch": "a1M3h000000I9sPEAS",
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/0": "a1O3h000001BMO1EAO",
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/1": "a1O3h000001BMO2EAO",
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/2": "a1O3h000001BMO3EAO",
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/3": "a1O3h000001BMO4EAO",
+        "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English": "a333h0000005f9hAAA",
+        "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Create Account Discounts": "a1g3h000000JMbtAAG",
+        "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Create Quote": "a1g3h000000JMbuAAG",
+        "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Navigate to Quote": "a1g3h000000JMbvAAG"
+    },
+    "sourceKeyToMatchingKeysData": {
+        "%vlocity_namespace%__DRBundle__c/AccountSearch": {
+            "%vlocity_namespace%__BatchSize__c": 200,
+            "%vlocity_namespace%__CheckFieldLevelSecurity__c": false,
+            "%vlocity_namespace%__CustomInputClass__c": "",
+            "%vlocity_namespace%__CustomOutputClass__c": "",
+            "%vlocity_namespace%__DRMapItem__c": "AccountSearch_Mappings.json",
+            "%vlocity_namespace%__DRMapName__c": "AccountSearch",
+            "%vlocity_namespace%__DeleteOnSuccess__c": false,
+            "%vlocity_namespace%__Description__c": "",
+            "%vlocity_namespace%__GlobalKey__c": "89c5cab3-8d73-22a7-b981-47bff64fb4be",
+            "%vlocity_namespace%__IgnoreErrors__c": false,
+            "%vlocity_namespace%__InputCustom__c": "",
+            "%vlocity_namespace%__InputJson__c": "",
+            "%vlocity_namespace%__InputType__c": "JSON",
+            "%vlocity_namespace%__InputXml__c": "",
+            "%vlocity_namespace%__InterfaceObject__c": "json",
+            "%vlocity_namespace%__IsDefaultForInterface__c": false,
+            "%vlocity_namespace%__IsProcessSuperBulk__c": false,
+            "%vlocity_namespace%__OuboundStagingObjectDataField__c": "",
+            "%vlocity_namespace%__OutboundConfigurationField__c": "",
+            "%vlocity_namespace%__OutboundConfigurationName__c": "",
+            "%vlocity_namespace%__OutboundStagingObjectName__c": "",
+            "%vlocity_namespace%__OutputType__c": "JSON",
+            "%vlocity_namespace%__OverwriteAllNullValues__c": false,
+            "%vlocity_namespace%__PreprocessorClassName__c": "",
+            "%vlocity_namespace%__ProcessNowThreshold__c": -1,
+            "%vlocity_namespace%__RequiredPermission__c": "",
+            "%vlocity_namespace%__RollbackOnError__c": false,
+            "%vlocity_namespace%__SampleInputCustom__c": "",
+            "%vlocity_namespace%__SampleInputJSON__c": "AccountSearch_SampleInputJson.json",
+            "%vlocity_namespace%__SampleInputRows__c": "",
+            "%vlocity_namespace%__SampleInputXML__c": "",
+            "%vlocity_namespace%__TargetOutCustom__c": "",
+            "%vlocity_namespace%__TargetOutDocuSignTemplateId__c": "",
+            "%vlocity_namespace%__TargetOutJson__c": "",
+            "%vlocity_namespace%__TargetOutPdfDocName__c": "",
+            "%vlocity_namespace%__TargetOutXml__c": "",
+            "%vlocity_namespace%__Type__c": "Extract",
+            "%vlocity_namespace%__UseAssignmentRules__c": false,
+            "%vlocity_namespace%__UseTranslations__c": false,
+            "%vlocity_namespace%__XmlOutputSequence__c": "",
+            "%vlocity_namespace%__XmlRemoveDeclaration__c": false,
+            "Name": "AccountSearch",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRBundle__c",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__DRBundle__c/AccountSearch"
+        },
+        "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English": {
+            "%vlocity_namespace%__AdditionalInformation__c": "This OS calls CPQSubmit to create Quote and Navigates to the Quote Cart",
+            "%vlocity_namespace%__DisableMetadataCache__c": false,
+            "%vlocity_namespace%__ElementTypeToHTMLTemplateList__c": "{\"ElementTypeToHTMLTemplateList\":[]}",
+            "%vlocity_namespace%__Element__c": [
+                "CPQ_CreateQuote_English_Element_Create-Account-Discounts.json",
+                "CPQ_CreateQuote_English_Element_Create-Quote.json",
+                "CPQ_CreateQuote_English_Element_Navigate-to-Quote.json"
+            ],
+            "%vlocity_namespace%__IsLwcEnabled__c": false,
+            "%vlocity_namespace%__IsProcedure__c": false,
+            "%vlocity_namespace%__IsReusable__c": false,
+            "%vlocity_namespace%__Language__c": "English",
+            "%vlocity_namespace%__PropertySet__c": "CPQ_CreateQuote_English_PropertySet.json",
+            "%vlocity_namespace%__SubType__c": "CreateQuote",
+            "%vlocity_namespace%__Type__c": "CPQ",
+            "Name": "CPQ Create Quote",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English"
+        },
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/0": {
+            "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+            "%vlocity_namespace%__DomainObjectCreationOrder__c": 0,
+            "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Details",
+            "%vlocity_namespace%__FilterGroup__c": 0,
+            "%vlocity_namespace%__FilterOperator__c": "LIKE",
+            "%vlocity_namespace%__FilterValue__c": "Name",
+            "%vlocity_namespace%__GlobalKey__c": "9ea70088-14cf-0367-7fc7-dff976015c59",
+            "%vlocity_namespace%__InterfaceFieldAPIName__c": "Name",
+            "%vlocity_namespace%__InterfaceObjectLookupOrder__c": 1,
+            "%vlocity_namespace%__InterfaceObjectName__c": "Account",
+            "%vlocity_namespace%__IsDisabled__c": false,
+            "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+            "%vlocity_namespace%__MapId__c": "AccountSearchCustom742",
+            "%vlocity_namespace%__UpsertKey__c": false,
+            "Name": "AccountSearch",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c",
+            "VlocityDataPackIsIncluded": true,
+            "VlocityRecordSourceKey": "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/0"
+        },
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/1": {
+            "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+            "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+            "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Details:AccountNumber",
+            "%vlocity_namespace%__GlobalKey__c": "bb2109c3-70e5-3615-43b0-417e5eadb4d2",
+            "%vlocity_namespace%__InterfaceFieldAPIName__c": "Details:AccountNumber",
+            "%vlocity_namespace%__IsDisabled__c": false,
+            "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+            "%vlocity_namespace%__MapId__c": "AccountSearchCustom9009",
+            "%vlocity_namespace%__UpsertKey__c": false,
+            "Name": "AccountSearch",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c",
+            "VlocityDataPackIsIncluded": true,
+            "VlocityRecordSourceKey": "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/1"
+        },
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/2": {
+            "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+            "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+            "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Details:Id",
+            "%vlocity_namespace%__GlobalKey__c": "7dcfd2a4-6c1b-d02c-03ad-fa8e6a5c5eb5",
+            "%vlocity_namespace%__InterfaceFieldAPIName__c": "Details:Id",
+            "%vlocity_namespace%__IsDisabled__c": false,
+            "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+            "%vlocity_namespace%__MapId__c": "AccountSearchCustom5736",
+            "%vlocity_namespace%__UpsertKey__c": false,
+            "Name": "AccountSearch",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c",
+            "VlocityDataPackIsIncluded": true,
+            "VlocityRecordSourceKey": "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/2"
+        },
+        "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/3": {
+            "%vlocity_namespace%__DomainObjectAPIName__c": "json",
+            "%vlocity_namespace%__DomainObjectCreationOrder__c": 1,
+            "%vlocity_namespace%__DomainObjectFieldAPIName__c": "Details:Name",
+            "%vlocity_namespace%__GlobalKey__c": "22251e26-fdd4-34d7-0255-787f36282156",
+            "%vlocity_namespace%__InterfaceFieldAPIName__c": "Details:Name",
+            "%vlocity_namespace%__IsDisabled__c": false,
+            "%vlocity_namespace%__IsRequiredForUpsert__c": false,
+            "%vlocity_namespace%__MapId__c": "AccountSearchCustom6779",
+            "%vlocity_namespace%__UpsertKey__c": false,
+            "Name": "AccountSearch",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRMapItem__c",
+            "VlocityDataPackIsIncluded": true,
+            "VlocityRecordSourceKey": "DataRaptor/AccountSearch/%vlocity_namespace%__DRMapItem__c/3"
+        },
+        "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Create Account Discounts": {
+            "%vlocity_namespace%__Active__c": true,
+            "%vlocity_namespace%__OmniScriptId__c": {
+                "Name": "CPQ Create Quote",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English",
+                "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+            },
+            "%vlocity_namespace%__PropertySet__c": "{\"HTMLTemplateId\":\"\",\"controlWidth\":12,\"disOnTplt\":false,\"extraPayload\":{},\"failureAbortLabel\":\"Abort\",\"failureAbortMessage\":\"Are you sure?\",\"failureNextLabel\":\"Continue\",\"inProgressMessage\":\"In Progress\",\"label\":\"Create Account Discounts\",\"message\":{},\"postMessage\":\"Done\",\"postTransformBundle\":\"\",\"preTransformBundle\":\"\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPageName\":\"\",\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"remoteClass\":\"%vlocity_namespace%.CPQAppHandler\",\"remoteMethod\":\"createAccountDiscounts\",\"remoteOptions\":{\"cartId\":\"%cartId%\",\"postTransformBundle\":\"\",\"preTransformBundle\":\"\"},\"remoteTimeout\":30000,\"responseJSONNode\":\"\",\"responseJSONPath\":\"\",\"sendJSONNode\":\"\",\"sendJSONPath\":\"\",\"show\":null,\"showPersistentComponent\":[false,false],\"ssm\":false,\"svgIcon\":\"\",\"svgSprite\":\"\",\"validationRequired\":\"None\",\"wpm\":false}",
+            "%vlocity_namespace%__ReusableOmniScript__c": false,
+            "%vlocity_namespace%__Type__c": "Remote Action",
+            "Name": "Create Account Discounts",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Create Account Discounts",
+            "VlocityDataPackIsIncluded": true,
+            "%vlocity_namespace%__Order__c": 1
+        },
+        "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Create Quote": {
+            "%vlocity_namespace%__Active__c": true,
+            "%vlocity_namespace%__OmniScriptId__c": {
+                "Name": "CPQ Create Quote",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English",
+                "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+            },
+            "%vlocity_namespace%__PropertySet__c": "{\"HTMLTemplateId\":\"\",\"controlWidth\":12,\"extraPayload\":{},\"failureAbortLabel\":\"Abort\",\"failureAbortMessage\":\"Are you sure?\",\"failureNextLabel\":\"Continue\",\"inProgressMessage\":\"In Progress\",\"label\":\"Create Quote\",\"message\":{},\"postMessage\":\"Done\",\"postTransformBundle\":\"\",\"preTransformBundle\":\"\",\"redirectNextLabel\":\"Next\",\"redirectNextWidth\":3,\"redirectPageName\":\"\",\"redirectPreviousLabel\":\"Previous\",\"redirectPreviousWidth\":3,\"redirectTemplateUrl\":\"vlcAcknowledge.html\",\"remoteClass\":\"%vlocity_namespace%.CPQAppHandler\",\"remoteMethod\":\"checkout\",\"remoteOptions\":{\"postTransformBundle\":\"\",\"preTransformBundle\":\"\"},\"remoteTimeout\":30000,\"responseJSONNode\":\"\",\"responseJSONPath\":\"\",\"sendJSONNode\":\"\",\"sendJSONPath\":\"\",\"show\":null,\"showPersistentComponent\":[false,false],\"ssm\":false,\"validationRequired\":\"None\",\"wpm\":false}",
+            "%vlocity_namespace%__ReusableOmniScript__c": false,
+            "%vlocity_namespace%__Type__c": "Remote Action",
+            "Name": "Create Quote",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Create Quote",
+            "VlocityDataPackIsIncluded": true,
+            "%vlocity_namespace%__Order__c": 2
+        },
+        "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Navigate to Quote": {
+            "%vlocity_namespace%__Active__c": true,
+            "%vlocity_namespace%__OmniScriptId__c": {
+                "Name": "CPQ Create Quote",
+                "VlocityDataPackType": "VlocityMatchingKeyObject",
+                "VlocityMatchingRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English",
+                "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c"
+            },
+            "%vlocity_namespace%__PropertySet__c": "{\"HTMLTemplateId\":\"\",\"consoleTabLabel\":\"New\",\"controlWidth\":12,\"label\":\"Navigate to Quote\",\"message\":{},\"redirectPageName\":\"mobileDone\",\"redirectTemplateUrl\":\"vlcMobileConfirmation.html\",\"show\":null,\"source\":\"/apex/%vlocity_namespace%__HybridCPQ?id=%records|1:id%\",\"ssm\":false,\"type\":\"URL\",\"validationRequired\":\"Submit\",\"wpm\":false}",
+            "%vlocity_namespace%__ReusableOmniScript__c": false,
+            "%vlocity_namespace%__Type__c": "Done Action",
+            "Name": "Navigate to Quote",
+            "VlocityDataPackType": "SObject",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__Element__c",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__Element__c/%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English/Navigate to Quote",
+            "VlocityDataPackIsIncluded": true,
+            "%vlocity_namespace%__Order__c": 3
+        }
+    },
+    "dataPackKeyToPrimarySourceKey": {
+        "%vlocity_namespace%__DRBundle__c/AccountSearch": "DataRaptor/AccountSearch",
+        "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English": "OmniScript/CPQ_CreateQuote_English"
+    },
+    "diffType": {},
+    "sourceHashCodes": {},
+    "targetHashCodes": {},
+    "fullManifest": {},
+    "manifestFound": {},
+    "dataPackDisplayLabels": {
+        "DataRaptor/AccountSearch": "AccountSearch (DataRaptor/AccountSearch)",
+        "OmniScript/CPQ_CreateQuote_English": "CPQ_CreateQuote_English (CPQ/CreateQuote/English) (OmniScript/CPQ_CreateQuote_English)"
+    },
+    "allDataSummary": {
+        "DataRaptor/AccountSearch": {
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRBundle__c",
+            "Name": "AccountSearch",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__DRBundle__c/AccountSearch",
+            "VlocityDataPackType": "DataRaptor"
+        },
+        "OmniScript/CPQ_CreateQuote_English": {
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+            "Name": "CPQ Create Quote",
+            "%vlocity_namespace%__Type__c": "CPQ",
+            "%vlocity_namespace%__SubType__c": "CreateQuote",
+            "%vlocity_namespace%__Language__c": "English",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English",
+            "VlocityDataPackType": "OmniScript"
+        }
+    },
+    "pendingFromManifest": {},
+    "keysToDirectories": {
+        "DataRaptor/AccountSearch": "DataRaptor/AccountSearch",
+        "OmniScript/CPQ_CreateQuote_English": "OmniScript/CPQ_CreateQuote_English"
+    },
+    "VlocityDataPackKeyToUrlMapping": {},
+    "relationshipKeyToChildKeys": {},
+    "dataPackLabelsByDir": {
+        "vlocity/DataRaptor/AccountSearch": "AccountSearch",
+        "vlocity/OmniScript/CPQ_CreateQuote_English": "CPQ_CreateQuote_English"
+    },
+    "supportParallel": true,
+    "resetFileData": false,
+    "shouldSendUpdates": true,
+    "buildImportCachedAlreadyNull": null,
+    "elapsedTime": "0m 20s",
+    "hasValidImportsCached": {},
+    "records": [
+        {
+            "VlocityDataPackKey": "DataRaptor/AccountSearch",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__DRBundle__c",
+            "Name": "AccountSearch",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__DRBundle__c/AccountSearch",
+            "VlocityDataPackType": "DataRaptor",
+            "VlocityDataPackStatus": "Success",
+            "Id": "a1M3h000000I9sPEAS",
+            "VlocityDataPackDisplayLabel": "AccountSearch (DataRaptor/AccountSearch)"
+        },
+        {
+            "VlocityDataPackKey": "OmniScript/CPQ_CreateQuote_English",
+            "VlocityRecordSObjectType": "%vlocity_namespace%__OmniScript__c",
+            "Name": "CPQ Create Quote",
+            "%vlocity_namespace%__Type__c": "CPQ",
+            "%vlocity_namespace%__SubType__c": "CreateQuote",
+            "%vlocity_namespace%__Language__c": "English",
+            "VlocityRecordSourceKey": "%vlocity_namespace%__OmniScript__c/CPQ/CreateQuote/English",
+            "VlocityDataPackType": "OmniScript",
+            "VlocityDataPackStatus": "Success",
+            "Id": "a333h0000005f9hAAA",
+            "VlocityDataPackDisplayLabel": "CPQ_CreateQuote_English (CPQ/CreateQuote/English) (OmniScript/CPQ_CreateQuote_English)"
+        }
+    ]
+}
