@@ -1,0 +1,8 @@
+Name: profile
+ignoreDependencies: false
+VlocityDataPackKeys:
+    - profiles/Vlocity User.profile
+VlocityTypesToFetch:
+
+SalesforceTypesToFetch:
+    - Profile
