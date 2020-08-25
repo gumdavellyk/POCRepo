@@ -1,9 +1,6 @@
 {
     "compilerOptions": {
-<<<<<<< HEAD
-=======
         "experimentalDecorators": true,
->>>>>>> f0c2d018ebc73182c3c7ac0e7f6df15edc0a9d85
         "baseUrl": ".",
         "paths": {
             "c/demo_eng_account_data_wireframe": [
@@ -13,8 +10,6 @@
                 "demo_eng_image_wrapper/demo_eng_image_wrapper.js"
             ]
         }
-<<<<<<< HEAD
-=======
     },
     "include": [
         "**/*",
@@ -24,6 +19,5 @@
         "include": [
             "jest"
         ]
->>>>>>> f0c2d018ebc73182c3c7ac0e7f6df15edc0a9d85
     }
 }
