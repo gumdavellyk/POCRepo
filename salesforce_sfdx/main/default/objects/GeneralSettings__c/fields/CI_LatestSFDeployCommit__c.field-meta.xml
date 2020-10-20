@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CI_LatestSFDeployCommit__c</fullName>
+    <description>Automatically set updated by jenkins with the latest git commit reference for latest successful deploy</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field set by Jenkins Deploy pipeline</inlineHelpText>
+    <label>Latest SF Deploy Commit</label>
+    <length>40</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
